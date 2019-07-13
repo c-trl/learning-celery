@@ -1,5 +1,4 @@
 # Executing Celery tasks over RabbitMQ-server  
----  
 
 1. brew install rabbitmq
 2. brew link rabbitmq
