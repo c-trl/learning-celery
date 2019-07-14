@@ -1,6 +1,25 @@
 # Executing Celery tasks over RabbitMQ-server  
 
 1. brew install rabbitmq
+
+_had an issue with installing (linking):_
+```bash
+
+MM-MAC-4765:~ ctirol$  brew link rabbitmq
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+Could not symlink sbin/cuttlefish
+/usr/local/sbin is not writable.
+
+You can try again using:
+  brew link rabbitmq
+  
+MM-MAC-4765:~ ctirol$  sudo mkdir /usr/local/sbin
+MM-MAC-4765:~ ctirol$  sudo chown `whoami` /usr/local/sbin
+MM-MAC-4765:~ ctirol$  brew link rabbitmq
+Linking /usr/local/Cellar/rabbitmq/3.7.16... 24 symlinks created
+
+```
 2. brew link rabbitmq
 3. pip install celery
 4. make tasks.py:
